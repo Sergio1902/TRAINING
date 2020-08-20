@@ -1,0 +1,82 @@
+
+*{
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font1: 'Roboto', sans-serif;
+}
+body{
+    font-family: var(--font1);
+}
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+a{
+    display: inline-block;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+/* clase para todo la pagina */
+
+
+
+/* header */
+header{
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: white;
+}
+header .main-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .main-container .logo{
+    width: 100px;
+}
+header .main-container a{
+    color: red;
+    text-decoration: none;
+    margin: 0 15px;
+}
+/* hero banner */
+#Inicio{
+    position: relative;
+}
+#Inicio .bloque-inicio{
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#Inicio .bloque-inicio h1{
+    color: white;
+    font-size: 35px;
+}
+#Inicio .bloque-inicio p{
+    color: white;
+    font-size: 16px;
+}
+#Inicio .boton-inicio{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
