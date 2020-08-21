@@ -16,6 +16,7 @@ body{
     width: 100%;
     margin: 0 auto;
     padding: 0 10px;
+    
 }
 .section{
     padding: 100px 0;
@@ -56,7 +57,9 @@ header .main-container .logo{
 header .main-container a{
     color: red;
     text-decoration: none;
-    margin: 0 15px;
+}
+header .main-container a:not(:last-child){
+    margin-right: 20px;
 }
 
 /* hero banner */
@@ -109,18 +112,19 @@ header .main-container a{
 #Servicios .card-global-servicios{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
+    
 }
 #Servicios .card-global-servicios .card-servicios{
     margin: 0 15px;
     max-width: 350px;
-    width: 100%;
+    width: 29.167%;
 }
-.bloque-servicio{
-    position: relative;
+#Servicios .card-global-servicios .card-servicios:not(:last-child){
+    margin-right: 40px;
 }
+
 .bloque-servicio .bloque-contenido-servicio> h3{
     margin: 15px 0;
 }
@@ -130,8 +134,6 @@ header .main-container a{
     padding: 10px;
     border: 1px solid red;
     margin-top: 10px;
-    position: absolute;
-    right: 0;
     color: black;
 }
 
@@ -170,19 +172,43 @@ header .main-container a{
 
 /* Contactenos */
 #Contactenos{
-    position: relative;
+    position: relative;   
 }
 #Contactenos iframe{
-    width: 100%;
-    
+    width: 100%; 
 }
-#Contactenos .main-container{
+#Contactenos .contactos-form{
     position: absolute;
-    
-
-}
-#Contactenos .main-container .contactos-form{
-    margin-left: 60%;
+    width: 450px;
+    top: 15%;
+    right: 5%;
     background-color: red;
-    padding: 20px;
+    padding: 60px;
+}
+#Contactenos .contactos-form .form-block>input{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    outline: none;
+}
+#Contactenos .contactos-form .form-block>textarea{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 15px;
+    outline: none;
+    padding: 10px 10px;
+    resize: none;
+}
+#Contactenos .contactos-form .form-block .boton{
+    background-color: white;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+}
+#Contactenos .contactos-form .form-block .boton:hover{
+    background-color: rgb(7, 7, 7);
+    transition: all 0.5s ease;
+    color: white;
+    font-weight: bold;
 }
