@@ -12,19 +12,27 @@ body{
 }
 
 .main-container{
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     padding: 0 10px;
 }
+.section{
+    padding: 100px 0;
+}
 a{
     display: inline-block;
+    text-decoration: none;
+}
+p, h3, h4{
+   margin: 0; 
 }
 img{
     max-width: 100%;
     height: auto;
     display: block;
 }
-/* clase para todo la pagina */
+
 
 
 
@@ -50,17 +58,20 @@ header .main-container a{
     text-decoration: none;
     margin: 0 15px;
 }
+
 /* hero banner */
 #Inicio{
-    position: relative;
+    height: 700px;
+    background-image: url(../img/bannerprincipal.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #Inicio .bloque-inicio{
     position: absolute;
     text-align: center;
-    width: 500px;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 600px;
 }
 #Inicio .bloque-inicio h1{
     color: white;
@@ -80,3 +91,98 @@ header .main-container a{
     font-weight: bold;
 }
 
+/* nosotros */
+#Nosotros{
+    background-image: url(../img/latas.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    text-align: center;
+}
+#Nosotros p{
+    font-size: 16px;
+    color: white;
+}
+
+/* servicios */
+
+#Servicios .card-global-servicios{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+#Servicios .card-global-servicios .card-servicios{
+    margin: 0 15px;
+    max-width: 350px;
+    width: 100%;
+}
+.bloque-servicio{
+    position: relative;
+}
+.bloque-servicio .bloque-contenido-servicio> h3{
+    margin: 15px 0;
+}
+.bloque-servicio .bloque-contenido-servicio a{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid red;
+    margin-top: 10px;
+    position: absolute;
+    right: 0;
+    color: black;
+}
+
+/* Galeria */
+
+#Galeria .main-container-fluid{
+    max-width: 100%;
+}
+#Galeria .card-global-galeria{
+    display: flex;
+    flex-flow: row wrap;
+}
+#Galeria .card-global-galeria .card-galeria{
+    width: 33.3%;
+    position: relative;
+}
+#Galeria .card-global-galeria .card-galeria .cuadrado-perfecto h4{
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    top: 40%;
+    width: 100%;
+}
+#Galeria .card-global-galeria .card-galeria .cuadrado-perfecto>img{
+    filter: grayscale(1);
+}
+#Galeria .card-global-galeria .card-galeria:hover img{
+    filter: grayscale(0);
+    transition: all 0.5s;
+}
+#Galeria .card-global-galeria .card-galeria:hover h4{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+/* Contactenos */
+#Contactenos{
+    position: relative;
+}
+#Contactenos iframe{
+    width: 100%;
+    
+}
+#Contactenos .main-container{
+    position: absolute;
+    
+
+}
+#Contactenos .main-container .contactos-form{
+    margin-left: 60%;
+    background-color: red;
+    padding: 20px;
+}
