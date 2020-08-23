@@ -162,10 +162,10 @@
                                     if(isset($mensaje)){
                                         $para = "ser19car@gmail.com";
                                         $asunto = "esto es una prueba";
-                                        
+                                        $cuerpo = $nombre."\n".$email."\n".$mensaje;
                                         $adicional = "From: sergio_mcr19@hotmail.com";  
 
-                                        mail($para,$asunto,$adicional);
+                                        mail($para,$asunto,$cuerpo,$adicional);
                                         ?>
 
                                         <p>Envio Exitoso</p>
@@ -173,7 +173,7 @@
                                         <?php
 
 
-                                        ?>
+                                    
                                     }
                                 }
                             }
