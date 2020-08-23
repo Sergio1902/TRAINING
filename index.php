@@ -24,8 +24,8 @@
                 <a href="#Inicio">Inicio</a>
                 <a href="#Nosotros">Nosotros</a>
                 <a href="#Servicios">Servicios</a>
-                <a href="#Galería">Galería</a>  
-                <a href="#Contáctenos">Contáctenos</a> 
+                <a href="#Galeria">Galería</a>  
+                <a href="#Contactenos">Contáctenos</a> 
             </nav>
             <div class="hamburguesa">
                 <i class="fas fa-bars"></i>
@@ -53,37 +53,39 @@
                     <div class="card-servicios">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="img/servicio1.jpg" alt="servicio1">
+                                <img src="img/servicio1.png" alt="servicio1">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 1</h3>
                                 <p>Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
-                                <a href="#">Ver más...</a>
                             </div>
+                            <a href="#">Ver más...</a>
                         </div>
                     </div>
                     <div class="card-servicios">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="img/servicio2.jpg" alt="servicio2">
+                                <img src="img/servicio2.png" alt="servicio2">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 2</h3>
                                 <p>Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
-                                <a href="#">Ver más...</a>
+                                
                             </div>
+                            <a href="#">Ver más...</a>
                         </div>
                     </div>
                     <div class="card-servicios">
                         <div class="bloque-servicio">
                             <div class="bloque-img-servicio">
-                                <img src="img/servicio3.jpg" alt="servicio3">
+                                <img src="img/servicio3.png" alt="servicio3">
                             </div>
                             <div class="bloque-contenido-servicio">
                                 <h3>Servicio 3</h3>
                                 <p>Type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially</p>
-                                <a href="#">Ver más...</a>
+                                
                             </div>
+                            <a href="#">Ver más...</a>
                         </div>
                     </div>
                 </div>
@@ -94,37 +96,37 @@
                 <div class="card-global-galeria">
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery1.png" alt="galeria">
+                            <img src="img/galery1.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery3.png" alt="galeria">
+                            <img src="img/galery3.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery2.png" alt="galeria">
+                            <img src="img/galery2.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery3.png" alt="galeria">
+                            <img src="img/galery4.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery2.png" alt="galeria">
+                            <img src="img/galery2.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
                     <div class="card-galeria">
                         <div class="cuadrado-perfecto">
-                            <img src="img/galery1.png" alt="galeria">
+                            <img src="img/galery1.jpg" alt="galeria">
                             <h4>Imagen I</h4>
                         </div>
                     </div>
@@ -132,9 +134,9 @@
             </div>
         </section>
         <section id="Contactenos" >       
-            <iframe   src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Lima+(peru)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+            <iframe  frameBorder="0" src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=%20Lima+(peru)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
             <div class="contactos-form">
-                <form action="#" method="POST">
+                <form action="index.php" method="POST">
                     <div class="form-block">
                         <input type="text" name="nombre" placeholder="Apellidos y Nombres" class="from-control">
                     </div>
@@ -147,6 +149,43 @@
                     <div class="form-block">
                         <input class="boton" type="submit" value="ENVIAR">
                     </div>
+  
+                    <?php
+                        if($_SERVER["REQUEST_METHOD"] == "POST")
+                        {
+                            $nombre = $_POST["nombre"];
+                            $email = $_POST["email"];
+                            $mensaje = $_POST["mensaje"];
+
+                            if(isset($nombre)){
+                                if(isset($email)){
+                                    if(isset($mensaje)){
+                                        $para = "ser19car@gmail.com";
+                                        $asunto = "esto es una prueba";
+                                        
+                                        $adicional = "From: sergio_mcr19@hotmail.com";  
+
+                                        mail($para,$asunto,$adicional);
+                                        ?>
+
+                                        <p>Envio Exitoso</p>
+
+                                        <?php
+
+
+                                        ?>
+                                    }
+                                }
+                            }
+
+
+                        }
+                    
+                    ?>
+
+
+
+
                 </form>
             </div>
                    
@@ -191,6 +230,13 @@
         </div>       
     </footer>
 
-    <script src="js/menu-togle.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+
+
+    <script src="js/funciones.js"></script>
+ 
 </body>
 </html>

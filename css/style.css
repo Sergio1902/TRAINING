@@ -85,7 +85,7 @@ header .main-container a:not(:last-child){
 }
 
 .show{
-    height: 305px !important;
+    height: 240px !important;
 }
 
 
@@ -129,13 +129,15 @@ header .main-container a:not(:last-child){
 /* nosotros */
 #Nosotros{
     background-image: url(../img/latas.jpg);
+    background-attachment: fixed;
     background-size: cover;
     background-position: center center;
     color: white;
     text-align: center;
 }
 #Nosotros p{
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 25px;
     color: white;
 }
 
@@ -151,30 +153,41 @@ header .main-container a:not(:last-child){
     margin: 0 15px;
     max-width: 350px;
     width: 29.167%;
-    padding: 20px;
+    transition: 0.5s;   
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+#Servicios .card-global-servicios .card-servicios .bloque-servicio .bloque-img-servicio{
+    overflow: hidden;
+}
+#Servicios .card-global-servicios .card-servicios .bloque-servicio .bloque-img-servicio>img{
+    transition: all 0.5s ease;
+}
+#Servicios .card-global-servicios .card-servicios .bloque-servicio:hover .bloque-img-servicio>img{
+    transform: scale(1.2);
+    transition: all 0.5s;
 }
 #Servicios .card-global-servicios .card-servicios:hover{
 box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+transition: 0.5s;
 }
-
 #Servicios .card-global-servicios .card-servicios:not(:last-child){
     margin-right: 40px;
 }
-
+.bloque-servicio .bloque-contenido-servicio{
+    padding: 20px;
+}
 .bloque-servicio .bloque-contenido-servicio> h3{
     margin: 15px 0;
 }
-.bloque-servicio .bloque-contenido-servicio a{
+.bloque-servicio a{
     width: 100%;
     text-align: center;
     padding: 10px;
-    border: 1px solid red;
     margin-top: 10px;
     color: black;
     transition: all 0.5s;
 }
-.bloque-servicio .bloque-contenido-servicio a:hover{
+.bloque-servicio a:hover{
     background-color: red;
     color: white;
     transition: all 0.5s;
@@ -193,6 +206,7 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 #Galeria .card-global-galeria .card-galeria{
     width: 33.3%;
+    
     position: relative;
 }
 #Galeria .card-global-galeria .card-galeria .cuadrado-perfecto h4{
@@ -205,6 +219,8 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 #Galeria .card-global-galeria .card-galeria .cuadrado-perfecto>img{
     filter: grayscale(1);
+    object-fit: cover;
+    height: 350px;
 }
 #Galeria .card-global-galeria .card-galeria:hover img{
     filter: grayscale(0);
@@ -217,18 +233,20 @@ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 
 /* Contactenos */
 #Contactenos{
-    position: relative;  
-     
+    position: relative;   
+       
 }
 #Contactenos iframe{
     width: 100%; 
-    height: 500px; 
+    height: 550px;
+    display: block;
+    
 }
 #Contactenos .contactos-form{
     position: absolute;
     max-width: 450px;
     width: 100%;
-    top: 15%;
+    top: 12%;
     right: 5%;
     background-color: red;
     padding: 60px;
@@ -411,12 +429,12 @@ footer .barra-footer{
             transition: 0.5s ease-out;
     }
        
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 600px){
         /* Contactenos */
         #Contactenos .contactos-form{
             position: relative;
             border-radius: 0;
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
             top: 0;
             right: 0;
@@ -434,6 +452,17 @@ footer .barra-footer{
         }
         .row .colum-25{
             width: 100%;
+
+
+        }
+        .row .colum-25:nth-child(2),
+        .row .colum-25:nth-child(3),
+        .row .colum-25:nth-child(4){
+            padding-left: 10px;
+        }
+        .row .colum-25 .RRSS{
+            width: 100px;
+            margin: 0 auto;
         }
         .logo-footer{
             width: 200px;
